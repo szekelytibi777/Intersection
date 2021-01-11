@@ -142,14 +142,19 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="ConvexHuOfIntersections.cpp" />
     <ClCompile Include="Line.cpp" />
+    <ClCompile Include="Point.cpp" />
     <ClCompile Include="Primitive.cpp" />
     <ClCompile Include="Set.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Line.h" />
+    <ClInclude Include="Point.h" />
     <ClInclude Include="Primitive.h" />
     <ClInclude Include="Set.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="test.dat" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

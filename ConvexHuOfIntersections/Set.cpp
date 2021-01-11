@@ -1,6 +1,7 @@
 #include "Set.h"
 #include "Line.h"
 #include "Circle.h"
+#include "Point.h"
 
 Set::Set(){
 
@@ -55,4 +56,38 @@ void Set::getPrimitives(bool fromFile) {
 			}
 		}
 	}
+	points.reserve(numPrimitives * 2); // my guess
+}
+
+void Set::calcIntersections() {
+	for (int i = 0; i < primitives.size(); i++) {
+		for (int j = 0; j < primitives.size(); j++) {
+			if (i != j) {
+				Primitive p1 = primitives[i];
+				Primitive p2 = primitives[j];
+				vector<Point> is = intersect(p1, p2);
+				points.insert(points.end(), is.begin(), is.end());	
+			}
+		}
+	}
+}
+
+vector<Point> Set::intersect(const Primitive &p1, const Primitive &p2) {
+	vector<Point> pv;
+	short p = perm(p1.t, p2.t);
+	
+	switch (p) {
+		case perm('L', 'L'):
+			// Line - Line intersection
+			break;
+		case perm('L', 'C'):
+		case perm('C', 'L'):
+			// Line - Circle intersection
+			break;
+		case perm('C', 'C'):
+			// Circle - Circle intersection
+			break;
+
+	}
+	return pv;
 }

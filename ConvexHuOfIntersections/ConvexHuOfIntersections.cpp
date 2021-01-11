@@ -6,9 +6,11 @@
 
 using namespace std;
 Set theSet;
+
 int main()
 {
-    theSet.getPrimitives();
+    theSet.getPrimitives(true);
+    theSet.calcIntersections();
     std::cout << "Convex Hull Of Intersections!\n";
 }
 
