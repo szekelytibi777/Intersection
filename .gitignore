@@ -1,0 +1,11 @@
+
+ConvexHuOfIntersections/.vs/
+*.obj
+*.tlog
+*.exe
+*.recipe
+*.ilk
+*.log
+*.pdb
+*.txt
+ConvexHuOfIntersections/Debug/
